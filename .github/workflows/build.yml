@@ -1,0 +1,50 @@
+name: 사이트 굽기
+
+on:
+  # hotels.json 을 고치면 바로 다시 굽는다
+  push:
+    branches: [main]
+    paths:
+      - 'hotels.json'
+      - 'build.py'
+      - '.github/workflows/build.yml'
+  # 월요일 아침 7시(한국시간)에 가격·평점 갱신
+  schedule:
+    - cron: '0 22 * * 0'
+  # 버튼으로 직접 실행
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 부품 설치
+        run: pip install requests
+
+      - name: 굽기
+        env:
+          AGODA_SITE_ID: ${{ secrets.AGODA_SITE_ID }}
+          AGODA_API_KEY: ${{ secrets.AGODA_API_KEY }}
+          AGODA_API_URL: ${{ secrets.AGODA_API_URL }}
+        run: python build.py
+
+      - name: 결과 저장
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add index.html
+          if git diff --staged --quiet; then
+            echo "바뀐 게 없습니다."
+          else
+            git commit -m "chore: 사이트 갱신 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
+            git push
+          fi

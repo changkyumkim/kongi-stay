@@ -1,0 +1,34 @@
+{
+  "_읽어주세요": [
+    "이 파일만 고치면 사이트가 갱신됩니다. 다른 파일은 안 만져도 됩니다.",
+    "호텔을 추가하려면 hotels 안에 { } 덩어리를 하나 더 붙여넣으세요.",
+    "덩어리 사이는 쉼표(,)로 구분합니다. 마지막 덩어리 뒤에는 쉼표를 붙이지 마세요.",
+    "모르는 값은 null 로 두세요. 사이트에 '확인 필요'로 표시됩니다.",
+    "추측해서 넣으면 사람이 개를 데려갔다가 못 들어가는 사고가 납니다.",
+    "agoda_hid 찾는 법: 아고다 호텔 페이지에서 Ctrl+U → Ctrl+F → hotelId"
+  ],
+  "hotels": [
+    {
+      "name": "메종 글래드 제주",
+      "region": "제주",
+      "city": "제주시",
+      "agoda_hid": 42779,
+      "agoda_name": "제주 그랜드 호텔",
+      "max_weight_kg": 10,
+      "max_height_cm": 40,
+      "max_pets": 1,
+      "extra_fee_krw": 50000,
+      "fee_unit": "1박당",
+      "deposit_krw": 300000,
+      "vaccine_proof": true,
+      "common_area_ok": false,
+      "advance_days": 0,
+      "breed_blocked": "5대 맹견, 사람 상해 이력견, 중성화 미완료, 미등록견",
+      "amenity": "펫 스텝, 펫 쿠션·베드, 식기 (유모차 대여 1일 20,000원)",
+      "facility": "2층 야외 펫 그라운드, 메종힐스, 펫 다이닝(유료)",
+      "note": "공용공간은 케이지나 유모차에 넣어야 이동할 수 있고, 식당·수영장·사우나는 동반 불가입니다. 펫 헤리티지 스위트를 잡으면 5만원을 더 내고 2마리까지 됩니다.",
+      "source_url": "https://www.glad-hotels.com/maisongladjeju/rooms/petHeritagePremium.do",
+      "checked_on": "2026-09-02"
+    }
+  ]
+}
