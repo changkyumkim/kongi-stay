@@ -28,9 +28,9 @@ except ImportError:
 HERE = os.path.dirname(os.path.abspath(__file__))
 KST = timezone(timedelta(hours=9))
 
-SITE_ID = os.getenv("AGODA_SITE_ID", "")
-API_KEY = os.getenv("AGODA_API_KEY", "")
-API_URL = os.getenv("AGODA_API_URL", "")
+SITE_ID = os.getenv("AGODA_SITE_ID", "").strip()
+API_KEY = os.getenv("AGODA_API_KEY", "").strip()
+API_URL = os.getenv("AGODA_API_URL", "").strip()
 
 
 # ── 아고다 ────────────────────────────────────────────
