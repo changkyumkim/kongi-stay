@@ -250,7 +250,7 @@ input[type=range]:focus-visible{{outline:2px solid var(--ink);outline-offset:4px
   margin-bottom:14px;overflow:hidden;
 }}
 .hotel.no{{opacity:.55}}
-.photo{{width:100%;height:190px;object-fit:cover;display:block;background:var(--line)}}
+.photo{{width:100%;height:220px;object-fit:cover;object-position:center 35%;display:block;background:var(--line)}}
 .photo.ph{{background:linear-gradient(135deg,#E6E3DA,#D8D5CA)}}
 .body{{padding:20px 22px 22px}}
 

@@ -17,8 +17,8 @@
       "max_weight_kg": 10,
       "max_height_cm": 40,
       "max_pets": 1,
-      "extra_fee_krw": 50000,
-      "fee_unit": "1박당",
+      "extra_fee_krw": 0,
+      "fee_unit": null,
       "deposit_krw": 300000,
       "vaccine_proof": true,
       "common_area_ok": false,
@@ -26,7 +26,7 @@
       "breed_blocked": "5대 맹견, 사람 상해 이력견, 중성화 미완료, 미등록견",
       "amenity": "펫 스텝, 펫 쿠션·베드, 식기 (유모차 대여 1일 20,000원)",
       "facility": "2층 야외 펫 그라운드, 메종힐스, 펫 다이닝(유료)",
-      "note": "공용공간은 케이지나 유모차에 넣어야 이동할 수 있고, 식당·수영장·사우나는 동반 불가입니다. 펫 헤리티지 스위트를 잡으면 5만원을 더 내고 2마리까지 됩니다.",
+      "note": "한 마리만 데려가면 추가 요금은 없습니다. 펫 헤리티지 스위트를 잡으면 1박당 5만원을 더 내고 두 마리까지 됩니다. 공용공간은 케이지나 유모차에 넣어야 이동할 수 있고, 식당·수영장·사우나는 동반 불가입니다.",
       "source_url": "https://www.glad-hotels.com/maisongladjeju/rooms/petHeritagePremium.do",
       "checked_on": "2026-09-02"
     }
