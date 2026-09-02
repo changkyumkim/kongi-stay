@@ -183,6 +183,7 @@ def card(h, ag):
     {f'<p class="blocked"><b>받지 않는 경우</b> — {e(h["breed_blocked"])}</p>' if h.get("breed_blocked") else ""}
     {f'<p class="extra">{e(h["amenity"])}</p>' if h.get("amenity") else ""}
     {f'<p class="extra">{e(h["facility"])}</p>' if h.get("facility") else ""}
+    {f'<div class="tip-wrap"><span class="tip">{e(h["tip"])}</span></div>' if h.get("tip") else ""}
     {f'<p class="note">{e(h["note"])}</p>' if h.get("note") else ""}
 
     {f'<a class="cta" href="{e(link)}" target="_blank" rel="nofollow sponsored noopener">아고다에서 방 보기</a>' if link else ""}
@@ -275,6 +276,14 @@ input[type=range]:focus-visible{{outline:2px solid var(--ink);outline-offset:4px
 .blocked{{font-size:13px;background:var(--warn-lt);color:#8A3423;padding:10px 13px;border-radius:3px;margin-top:15px}}
 .extra{{font-size:13px;color:#4A4F4B;margin-top:9px}}
 .note{{font-size:13.5px;color:#4A4F4B;margin-top:13px;line-height:1.7}}
+.tip{{
+  font-size:14px;font-weight:600;color:#2A2E2B;margin-top:15px;line-height:2;
+  display:inline;
+  background:linear-gradient(transparent 62%,#F7E6A3 62%,#F7E6A3 94%,transparent 94%);
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  padding:0 2px;
+}}
+.tip-wrap{{margin-top:15px}}
 
 .cta{{
   display:inline-block;margin-top:18px;font-size:13.5px;font-weight:700;
