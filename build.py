@@ -205,6 +205,7 @@ def build_page(hotels, ag, stamp):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>우리 아이가 갈 수 있는 호텔 — 콩이스테이</title>
 <meta name="description" content="호텔마다 다른 반려견 체중·체고 기준을 우리 아이 크기로 갈라서 보여드립니다. 추가요금과 보증금까지 한눈에 비교하세요.">
 <meta property="og:title" content="우리 아이가 갈 수 있는 호텔">
@@ -215,6 +216,7 @@ def build_page(hotels, ag, stamp):
   --paper:#F4F2EC; --card:#FFFFFF; --ink:#1C2321; --muted:#6E736F;
   --line:#DFDCD2; --sage:#3D6B5C; --sage-lt:#E8EFEB;
   --warn:#B4472F; --warn-lt:#FBEDE9; --tight:#9A6B1F; --tight-lt:#F7EFDE;
+  --track:#C6C2B6;
 }}
 *{{box-sizing:border-box;margin:0;padding:0}}
 body{{
@@ -243,6 +245,13 @@ input[type=range]::-webkit-slider-thumb{{-webkit-appearance:none;width:18px;heig
 input[type=range]::-moz-range-track{{height:3px;background:var(--line)}}
 input[type=range]::-moz-range-thumb{{width:12px;height:12px;border-radius:50%;background:var(--sage);border:3px solid var(--card);box-shadow:0 0 0 1px var(--sage)}}
 input[type=range]:focus-visible{{outline:2px solid var(--ink);outline-offset:4px}}
+input[type=range]{{height:34px}}
+input[type=range]::-webkit-slider-runnable-track{{height:6px;background:var(--track);border-radius:3px}}
+input[type=range]::-webkit-slider-thumb{{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--sage);margin-top:-10px;border:3px solid var(--card);box-shadow:0 0 0 2px var(--sage)}}
+input[type=range]::-moz-range-track{{height:6px;background:var(--track);border-radius:3px}}
+input[type=range]::-moz-range-thumb{{width:20px;height:20px;border-radius:50%;background:var(--sage);border:3px solid var(--card);box-shadow:0 0 0 2px var(--sage)}}
+.hint{{font-size:12.5px;color:var(--muted);margin-top:12px}}
+.gap{{display:block;height:14px}}
 .count{{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:14.5px;font-weight:600}}
 .count b{{color:var(--sage);font-size:18px}}
 
@@ -299,9 +308,24 @@ input[type=range]:focus-visible{{outline:2px solid var(--ink);outline-offset:4px
 
 .foot{{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);line-height:1.8}}
 
+@media(prefers-color-scheme:dark){{
+  :root{{
+    --paper:#16181A; --card:#1F2225; --ink:#E9E7E1; --muted:#9CA29E;
+    --line:#343A3C; --track:#4C5356; --sage:#84C0A8; --sage-lt:#23332E;
+    --warn:#E79079; --warn-lt:#33221D; --tight:#DDB56C; --tight-lt:#2E2719;
+  }}
+  .photo{{background:#2A2E30}}
+  .photo.ph{{background:linear-gradient(135deg,#2C3033,#23272A)}}
+  .blocked{{color:#F0A88F}}
+  .extra{{color:#B9BFBB}}
+  .note{{color:#C3C9C5}}
+  .tip{{color:var(--ink);background:linear-gradient(transparent 62%,#6E5C25 62%,#6E5C25 94%,transparent 94%)}}
+  .cta:hover{{background:var(--ink);color:#16181A}}
+}}
 @media(max-width:520px){{
   .facts{{grid-template-columns:1fr}}
   .photo{{height:150px}}
+  .head h1{{font-size:clamp(22px,6.5vw,26px);letter-spacing:-.045em}}
 }}
 @media(prefers-reduced-motion:reduce){{*{{transition:none!important}}}}
 </style>
@@ -310,7 +334,7 @@ input[type=range]:focus-visible{{outline:2px solid var(--ink);outline-offset:4px
 <div class="wrap">
 
 <header class="head">
-  <h1>우리 아이가<br>갈 수 있는 호텔</h1>
+  <h1>우리 아이가 갈 수 있는 호텔</h1>
   <p>호텔마다 받아주는 강아지 크기가 다릅니다. 우리 아이 몸무게와 키를 넣으면 갈 수 있는 곳과 안 되는 곳을 갈라서 보여드려요.</p>
 </header>
 
@@ -327,6 +351,7 @@ input[type=range]:focus-visible{{outline:2px solid var(--ink);outline-offset:4px
       <input type="range" id="h" min="10" max="80" step="1" value="32" aria-label="반려견 체고">
     </div>
   </div>
+  <p class="hint">↔ 손잡이를 좌우로 움직여 보세요</p>
   <p class="count" id="count"></p>
 </section>
 
@@ -336,7 +361,7 @@ input[type=range]:focus-visible{{outline:2px solid var(--ink);outline-offset:4px
 
 <p class="foot">
   반려동물 규정은 호텔이 예고 없이 바꿉니다. 예약 전에 호텔에 다시 확인해 주세요.
-  각 호텔마다 확인한 날짜와 출처를 함께 적어두었습니다.<br>
+  각 호텔마다 확인한 날짜와 출처를 함께 적어두었습니다.<span class="gap"></span>
   이 페이지의 링크로 예약이 이루어지면 운영자가 일정 수수료를 받습니다.
   호텔 사진과 평점은 아고다 제공입니다.<br>
   {stamp} 갱신 · 호텔 {n}곳
