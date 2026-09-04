@@ -121,7 +121,9 @@ def card(h, ag):
     ht = h.get("max_height_cm")
 
     limits = []
-    if w is not None:
+    if h.get("weight_free"):
+        limits.append("몸무게 제한 없음")
+    elif w is not None:
         limits.append(f"{w}kg 이하")
     if ht is not None:
         limits.append(f"체고 {ht}cm 이하")
