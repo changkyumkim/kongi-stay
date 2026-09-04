@@ -163,7 +163,7 @@ def card(h, ag):
     place = city if (not region or region in city) else (city + " · " + region if city else region)
 
     return f"""
-<article class="hotel" data-w="{w if w is not None else ''}" data-h="{ht if ht is not None else ''}">
+<article class="hotel" id="h{hid if hid else ''}" data-w="{w if w is not None else ''}" data-h="{ht if ht is not None else ''}">
   {f'<img class="photo" src="{e(img)}" alt="{e(h["name"])} 사진" loading="lazy">' if img else '<div class="photo ph"></div>'}
   <div class="body">
     <div class="verdict"></div>
@@ -454,7 +454,26 @@ document.getElementById("h").addEventListener("input", ev => {{
   apply();
 }});
 
+const q = new URLSearchParams(location.search);
+const qw = parseFloat(q.get("w"));
+if(qw > 0){{
+  const ws = document.getElementById("w");
+  ws.value = Math.min(Math.max(qw, 1), 45);
+  document.getElementById("wv").innerHTML = ws.value + "<small>kg</small>";
+}}
+
 apply();
+
+if(location.hash.length > 1){{
+  const t = document.getElementById(location.hash.slice(1));
+  if(t){{
+    if(t.classList.contains("hide")){{
+      opened = true;
+      paint(cards.filter(c => c.classList.contains("no")));
+    }}
+    setTimeout(() => t.scrollIntoView({{behavior: "smooth", block: "start"}}), 80);
+  }}
+}}
 </script>
 </body>
 </html>
