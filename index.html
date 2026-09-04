@@ -163,7 +163,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 
 <main id="list">
 
-<article class="hotel" data-w="10" data-h="40">
+<article class="hotel" id="h42779" data-w="10" data-h="40">
   <img class="photo" src="https://pix8.agoda.net/hotelImages/42779/-1/39a80c5c2af5dcece9e096b219b823ff.jpg?ce=0&amp;s=800x600" alt="메종 글래드 제주 사진" loading="lazy">
   <div class="body">
     <div class="verdict"></div>
@@ -195,7 +195,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
   </div>
 </article>
 
-<article class="hotel" data-w="10" data-h="">
+<article class="hotel" id="h2106652" data-w="10" data-h="">
   <img class="photo" src="https://pix8.agoda.net/hotelImages/2106652/0/201df74aa08f07e713170e17cd0fe5e8.jpg?ce=2&amp;s=800x600" alt="서머셋 제주 신화월드 사진" loading="lazy">
   <div class="body">
     <div class="verdict"></div>
@@ -227,7 +227,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
   </div>
 </article>
 
-<article class="hotel" data-w="10" data-h="40">
+<article class="hotel" id="h478868" data-w="10" data-h="40">
   <img class="photo" src="https://pix8.agoda.net/hotelImages/478868/0/73f273b33af197613cd2d1795a830fb8.jpg?ce=2&amp;s=800x600" alt="한화리조트 제주 사진" loading="lazy">
   <div class="body">
     <div class="verdict"></div>
@@ -259,7 +259,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
   </div>
 </article>
 
-<article class="hotel" data-w="15" data-h="">
+<article class="hotel" id="h13448003" data-w="15" data-h="">
   <img class="photo" src="https://pix8.agoda.net/hotelImages/13448003/0/e03a1e63d7f06f3298aa63c2aab091b3.jpg?ce=3&amp;s=800x600" alt="소노캄 제주 사진" loading="lazy">
   <div class="body">
     <div class="verdict"></div>
@@ -291,7 +291,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
   </div>
 </article>
 
-<article class="hotel" data-w="15" data-h="">
+<article class="hotel" id="h2266863" data-w="15" data-h="">
   <img class="photo" src="https://pix8.agoda.net/hotelImages/2266863/-1/1c28407d6190239fac79346859f32bdd.jpg?ce=0&amp;s=800x600" alt="플레이스 캠프 제주 사진" loading="lazy">
   <div class="body">
     <div class="verdict"></div>
@@ -411,7 +411,26 @@ document.getElementById("h").addEventListener("input", ev => {
   apply();
 });
 
+const q = new URLSearchParams(location.search);
+const qw = parseFloat(q.get("w"));
+if(qw > 0){
+  const ws = document.getElementById("w");
+  ws.value = Math.min(Math.max(qw, 1), 45);
+  document.getElementById("wv").innerHTML = ws.value + "<small>kg</small>";
+}
+
 apply();
+
+if(location.hash.length > 1){
+  const t = document.getElementById(location.hash.slice(1));
+  if(t){
+    if(t.classList.contains("hide")){
+      opened = true;
+      paint(cards.filter(c => c.classList.contains("no")));
+    }
+    setTimeout(() => t.scrollIntoView({behavior: "smooth", block: "start"}), 80);
+  }
+}
 </script>
 </body>
 </html>
