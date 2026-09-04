@@ -99,6 +99,29 @@
       "note": "15kg까지 됩니다. 한 마리는 추가 요금이 없고 두 마리째는 30,000원인데, 1박당인지 투숙당인지는 확인이 필요합니다. 2년 이내 광견병과 종합백신 접종 서류를 반드시 가져가야 하고, 없으면 입실이 안 됩니다. 공용공간에서는 1.5m 고정형 리드줄이 필요합니다. 보호자 한 명이 두 마리까지 볼 수 있습니다. 16kg 이상은 이 객실이 안 되지만 소노캄 제주 안에 다른 객실이 있으니 문의해 보세요.",
       "source_url": null,
       "checked_on": "2026-09-03"
+    },
+    {
+      "name": "플레이스 캠프 제주",
+      "region": "제주",
+      "city": "서귀포시 성산읍",
+      "agoda_hid": 2266863,
+      "agoda_name": null,
+      "max_weight_kg": 15,
+      "max_height_cm": null,
+      "max_pets": 1,
+      "extra_fee_krw": 22000,
+      "fee_unit": "1박당",
+      "deposit_krw": null,
+      "vaccine_proof": true,
+      "common_area_ok": null,
+      "advance_days": 0,
+      "breed_blocked": null,
+      "amenity": "식기류, 펫 계단, 펫 쿠션, 배변판, 배변봉투, 배변패드 2장, 펫 물티슈",
+      "facility": "반려동물 동반 객실 — 스탠다드 9.7㎡ (ART동) · 디럭스 19.4㎡ (PASSION동)",
+      "tip": "한 마리라도 1박당 22,000원이 붙습니다. 3박이면 66,000원입니다.",
+      "note": "15kg 미만 한 마리만 됩니다. 반려동물 객실은 전화로만 예약할 수 있습니다 (1577-0069 #1). 1년 이내 광견병 예방접종 기록을 반드시 가져가야 합니다. 전 객실 금연입니다.",
+      "source_url": "https://phoenixhnr.co.kr/static/playcecamp/room/pet-room",
+      "checked_on": "2026-09-03"
     }
   ]
 }
