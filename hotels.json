@@ -216,6 +216,30 @@
       "note": "30kg 이하이면서 길들여진 아이만 입실할 수 있습니다. 강아지만 되고 다른 반려동물은 안 됩니다.\n\n객실당 기본 한 마리이고 최대 두 마리까지 되는데, 두 마리째는 30,000원이 붙습니다. 빌라 스위트는 기본 두 마리입니다.\n\n법적 맹견과 공격성이 강한 아이는 입마개를 해야 하고, 안 하면 부대시설 이용이 막힐 수 있습니다. 호텔 안에서 이동할 때는 케이지나 유모차가 필요합니다. 조식 레스토랑 하늘정원은 동반 입장이 안 돼서 보호자가 교대로 이용해야 합니다. 전 객실 금연입니다.",
       "source_url": "https://www.pyeongchangramadahotel.com/view/viewLink.do?page=homepage/KOR/accommodation/pet_stndb",
       "checked_on": "2026-09-04"
+    },
+    {
+      "name": "호텔 어라운드 평창",
+      "region": "강원",
+      "city": "평창",
+      "agoda_hid": 37776535,
+      "agoda_name": "호텔 어라운드 평창",
+      "max_weight_kg": 25,
+      "max_height_cm": null,
+      "max_pets": 2,
+      "extra_fee_krw": 0,
+      "fee_unit": null,
+      "deposit_krw": null,
+      "vaccine_proof": true,
+      "common_area_ok": true,
+      "advance_days": 0,
+      "breed_blocked": "중성화 미완료, 법적 맹견(도사견·핏불테리어·아메리칸 스태퍼드셔 테리어·로트와일러 등), 짖음이나 공격성이 심한 경우",
+      "amenity": "반려견 침대, 배변패드 대형 5매, 클리너, 탈취제, 계단 슬라이드, 식기",
+      "facility": "테라스 스위트 펫룸 76㎡ (더블·패밀리) · 휘닉스파크 920m · CU 무인 편의점 24시간",
+      "tip": "25kg까지 되지만 중성화가 안 된 아이는 입실이 안 됩니다.",
+      "note": "25kg 이하만 됩니다. 객실당 두 마리까지 되고 두 마리째는 20,000원이 붙습니다.\n\n2년 이내 종합백신과 광견병 접종을 마쳐야 하고, 접종 확인서나 반려견 수첩을 가져가야 합니다. 동물등록도 되어 있어야 하고, 체크인 때 서류 확인과 동의서 작성을 합니다.\n\n이동할 때는 리드줄이나 이동장이 필요하고 외부 산책은 1.2m 이하 리드줄을 써야 합니다. 펫룸이 아닌 객실에 데려가면 퇴실 조치됩니다. 반려견만 두고 외출할 수 없습니다.\n\n이 조건은 호텔 홈페이지가 아니라 아고다에 호텔이 올린 안내문에 있습니다. 예약 전에 한 번 더 확인해 주세요.",
+      "source_url": "https://www.agoda.com/ko-kr/hotel-atrium-pyeongchang_4/hotel/pyeongchang-gun-kr.html",
+      "source_label": "아고다 숙소 안내",
+      "checked_on": "2026-09-04"
     }
   ]
 }

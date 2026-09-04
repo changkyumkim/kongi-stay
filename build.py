@@ -195,7 +195,7 @@ def card(h, ag):
     {f'<a class="cta" href="{e(link)}" target="_blank" rel="nofollow sponsored noopener">아고다에서 방 보기</a>' if link else ""}
 
     <p class="src">
-      {f'<a href="{e(h["source_url"])}" target="_blank" rel="noopener nofollow">호텔 공식 규정</a>' if h.get("source_url") else "출처 확인 필요"}
+      {f'<a href="{e(h["source_url"])}" target="_blank" rel="noopener nofollow">{e(h.get("source_label") or "호텔 공식 규정")}</a>' if h.get("source_url") else "출처 확인 필요"}
       {" · " + e(h["checked_on"]) + " 확인" if h.get("checked_on") else ""}
     </p>
   </div>
