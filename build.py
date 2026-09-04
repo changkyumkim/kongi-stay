@@ -286,11 +286,11 @@ input[type=range]::-moz-range-thumb{{width:20px;height:20px;border-radius:50%;ba
 .extra{{font-size:13px;color:#4A4F4B;margin-top:9px}}
 .note{{font-size:13.5px;color:#4A4F4B;margin-top:13px;line-height:1.7}}
 .tip{{
-  font-size:14px;font-weight:600;color:#2A2E2B;margin-top:15px;line-height:2;
-  display:inline;
-  background:linear-gradient(transparent 62%,#F7E6A3 62%,#F7E6A3 94%,transparent 94%);
-  -webkit-box-decoration-break:clone;box-decoration-break:clone;
-  padding:0 2px;
+  font-size:14px;font-weight:600;color:#2A2E2B;line-height:1.65;
+  display:block;
+  background:#F7E6A3;
+  border-left:4px solid #DFB63F;
+  padding:11px 13px;
 }}
 .tip-wrap{{margin-top:15px}}
 

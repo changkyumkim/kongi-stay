@@ -122,6 +122,29 @@
       "note": "15kg 미만 한 마리만 됩니다. 반려동물 객실은 전화로만 예약할 수 있습니다 (1577-0069 #1). 1년 이내 광견병 예방접종 기록을 반드시 가져가야 합니다. 전 객실 금연입니다.",
       "source_url": "https://phoenixhnr.co.kr/static/playcecamp/room/pet-room",
       "checked_on": "2026-09-03"
+    },
+    {
+      "name": "세인트존스 호텔 강릉",
+      "region": "강원",
+      "city": "강릉",
+      "agoda_hid": 3541400,
+      "agoda_name": null,
+      "max_weight_kg": null,
+      "max_height_cm": null,
+      "max_pets": 2,
+      "extra_fee_krw": null,
+      "fee_unit": null,
+      "deposit_krw": null,
+      "vaccine_proof": true,
+      "common_area_ok": true,
+      "advance_days": 0,
+      "breed_blocked": null,
+      "amenity": "스너그 하우스 또는 방석, 배변용품(배변판·패드·봉투), 식기, 계단, 전용 수건 2장, 전용 샴푸 (유모차 대여 1박 20,000원 · 시간당 5,000원)",
+      "facility": "펫 더블룸 27.44㎡ · 펫 트윈 · 펫 오션 더블 · 펫 오션 트윈 / 히노끼탕·펫 욕조·드라이룸·드라이기 무료 대여 (선착순 사전 예약)",
+      "tip": "반려견 체중 제한이 공식 규정에 없습니다. 큰 아이라면 예약 전에 033-660-9000 으로 확인해 주세요.",
+      "note": "펫 객실은 두 마리, 스위트 객실은 세 마리까지 권장하고 전용 어메니티는 한 마리 기준으로 나옵니다. 반려견 추가 요금과 보증금은 규정에 적혀 있지 않아 확인이 필요합니다. 2026년 3월부터 예방접종 확인서 지참이 의무라 체크인 때 반드시 가져가야 합니다. 맹견 5종(도사견, 아메리칸 핏불테리어, 아메리칸 스태퍼드셔 테리어, 스태퍼드셔 불테리어, 로트와일러)은 금지가 아니라 법정 교육 이수와 책임보험 가입이 필요합니다. 반려견 객실이 아닌 방에 데려가면 객실당 30만원이 부과됩니다. 부대시설을 이용할 때는 케이지나 유모차가 필요합니다.",
+      "source_url": "https://new.stjohns.co.kr/accommodation/index/PER",
+      "checked_on": "2026-09-04"
     }
   ]
 }
