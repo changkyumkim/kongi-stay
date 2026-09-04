@@ -193,6 +193,29 @@
       "note": "동반 요금이 객실 등급마다 다릅니다. 그린·오렌지·빌라동(스탠다드, 스위트, 로얄, 로얄 스위트)은 1박당 30,000원이고, 블루동 스카이 계열은 1박당 60,000원입니다.\n\n한 마리만 됩니다. 사전 예약이 필수라 그냥 가면 입실이 안 됩니다 (1577-0069 #1).\n\n반려견 유모차는 18kg 이하만 빌릴 수 있습니다. 이건 대여 조건이고 입실 제한은 아닙니다. 스카이 계열은 무료, 나머지는 1박당 20,000원입니다. 전 객실 금연입니다.",
       "source_url": "https://phoenixhnr.co.kr/static/pyeongchang/room/pet-room",
       "checked_on": "2026-09-04"
+    },
+    {
+      "name": "라마다 호텔 & 스위트 평창",
+      "region": "강원",
+      "city": "평창",
+      "agoda_hid": 4973710,
+      "agoda_name": "라마다 호텔 & 스위트 바이 윈덤 강원 평창",
+      "max_weight_kg": 30,
+      "max_height_cm": null,
+      "max_pets": 2,
+      "extra_fee_krw": 0,
+      "fee_unit": null,
+      "deposit_krw": null,
+      "vaccine_proof": null,
+      "common_area_ok": true,
+      "advance_days": 0,
+      "breed_blocked": null,
+      "amenity": "펫 방석, 식기·물그릇, 배변판, 배변패드 2매, 일회용 봉투 2장, 펫 샴푸, 펫 타월 2장",
+      "facility": "펫룸 4종 — 스탠다드 더블(26㎡ 복층) · 스탠다드 트윈 · 디럭스 패밀리 · 빌라 스위트 / 펫 드라이룸",
+      "tip": "30kg까지 됩니다. 한 마리는 추가 요금이 없어요.",
+      "note": "30kg 이하이면서 길들여진 아이만 입실할 수 있습니다. 강아지만 되고 다른 반려동물은 안 됩니다.\n\n객실당 기본 한 마리이고 최대 두 마리까지 되는데, 두 마리째는 30,000원이 붙습니다. 빌라 스위트는 기본 두 마리입니다.\n\n법적 맹견과 공격성이 강한 아이는 입마개를 해야 하고, 안 하면 부대시설 이용이 막힐 수 있습니다. 호텔 안에서 이동할 때는 케이지나 유모차가 필요합니다. 조식 레스토랑 하늘정원은 동반 입장이 안 돼서 보호자가 교대로 이용해야 합니다. 전 객실 금연입니다.",
+      "source_url": "https://www.pyeongchangramadahotel.com/view/viewLink.do?page=homepage/KOR/accommodation/pet_stndb",
+      "checked_on": "2026-09-04"
     }
   ]
 }
