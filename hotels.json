@@ -240,6 +240,29 @@
       "source_url": "https://www.agoda.com/ko-kr/hotel-atrium-pyeongchang_4/hotel/pyeongchang-gun-kr.html",
       "source_label": "아고다 숙소 안내",
       "checked_on": "2026-09-04"
+    },
+    {
+      "name": "소노펫클럽앤리조트 비발디파크",
+      "region": "강원",
+      "city": "홍천",
+      "agoda_hid": 28836415,
+      "agoda_name": null,
+      "max_weight_kg": 45,
+      "max_height_cm": null,
+      "max_pets": 1,
+      "extra_fee_krw": null,
+      "fee_unit": null,
+      "deposit_krw": null,
+      "vaccine_proof": true,
+      "common_area_ok": null,
+      "advance_days": 0,
+      "breed_blocked": null,
+      "amenity": "체급별 펫 용품 세트, 체크인 때 전용 리드줄 제공",
+      "facility": "펫 전용 객실 8종 (패밀리·스위트·실버·골드·프레지덴셜) 72.7㎡부터 · 펫 플레이그라운드 · 반려묘 동반 가능",
+      "tip": "45kg 대형견까지 됩니다. 반려묘도 함께 갈 수 있어요.",
+      "note": "45kg까지 됩니다. 다만 두 마리는 15kg 이하일 때만 되고 추가 요금 30,000원이 붙습니다. 16kg을 넘으면 한 마리만 됩니다.\n\n작은 아이와 큰 아이를 같이 데려가면 큰 아이 기준이 적용됩니다. 소형견 한 마리와 대형견 한 마리는 대형견 두 마리로 계산되어 입실이 안 됩니다.\n\n개 크기에 따라 객실 정원이 달라집니다. 소·중형견과 가면 4인(최대 6인), 중대·대형견과 가면 3인(최대 5인)입니다. 보호자도 15kg 이하는 한 명이 두 마리, 16kg부터는 한 명이 한 마리까지만 볼 수 있습니다.\n\n2년 이내 광견병과 종합백신 접종 내역이 확인되어야 하고, 만 10살 이상은 3년 이내면 됩니다. 16kg부터는 1.2m 고정형 목줄만 되고 가슴줄(하네스)은 쓸 수 없습니다.",
+      "source_url": "https://www.sonohotelsresorts.com/petclub/pet/detail/RM00032731",
+      "checked_on": "2026-09-04"
     }
   ]
 }
