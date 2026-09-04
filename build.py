@@ -158,6 +158,10 @@ def card(h, ag):
 
     pets = f'{h["max_pets"]}마리' if h.get("max_pets") is not None else None
 
+    note_html = "".join(
+        f'<p class="note">{e(p.strip())}</p>'
+        for p in str(h.get("note") or "").split("\n") if p.strip())
+
     city = (h.get("city") or "").strip()
     region = (h.get("region") or "").strip()
     place = city if (not region or region in city) else (city + " · " + region if city else region)
@@ -184,7 +188,7 @@ def card(h, ag):
     {f'<p class="extra">{e(h["amenity"])}</p>' if h.get("amenity") else ""}
     {f'<p class="extra">{e(h["facility"])}</p>' if h.get("facility") else ""}
     {f'<div class="tip-wrap"><span class="tip">{e(h["tip"])}</span></div>' if h.get("tip") else ""}
-    {f'<p class="note">{e(h["note"])}</p>' if h.get("note") else ""}
+    {note_html}
 
     {f'<a class="cta" href="{e(link)}" target="_blank" rel="nofollow sponsored noopener">아고다에서 방 보기</a>' if link else ""}
 
