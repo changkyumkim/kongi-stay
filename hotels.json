@@ -263,6 +263,20 @@
       "note": "45kg까지 됩니다. 다만 두 마리는 15kg 이하일 때만 되고 추가 요금 30,000원이 붙습니다. 16kg을 넘으면 한 마리만 됩니다.\n\n작은 아이와 큰 아이를 같이 데려가면 큰 아이 기준이 적용됩니다. 소형견 한 마리와 대형견 한 마리는 대형견 두 마리로 계산되어 입실이 안 됩니다.\n\n개 크기에 따라 객실 정원이 달라집니다. 소·중형견과 가면 4인(최대 6인), 중대·대형견과 가면 3인(최대 5인)입니다. 보호자도 15kg 이하는 한 명이 두 마리, 16kg부터는 한 명이 한 마리까지만 볼 수 있습니다.\n\n2년 이내 광견병과 종합백신 접종 내역이 확인되어야 하고, 만 10살 이상은 3년 이내면 됩니다. 16kg부터는 1.2m 고정형 목줄만 되고 가슴줄(하네스)은 쓸 수 없습니다.",
       "source_url": "https://www.sonohotelsresorts.com/petclub/pet/detail/RM00032731",
       "checked_on": "2026-09-04"
+    },
+    {
+      "name": "레피다리조트",
+      "region": "충남",
+      "city": "태안",
+      "agoda_hid": 83986719,
+      "max_weight_kg": 10,
+      "extra_fee_krw": 20000,
+      "fee_unit": "1마리당",
+      "vaccine_proof": true,
+      "note": "예약 시 A·B·M동 선택 필수 · 광견병 접종 증명서 지참",
+      "source_url": "http://www.lepidaresort.com/room_13.html",
+      "source_label": "Agoda",
+      "checked_on": "2026-09-05"
     }
   ]
 }
