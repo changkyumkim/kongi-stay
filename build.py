@@ -112,6 +112,7 @@ def card(h, ag):
     a = ag.get(hid, {}) if hid else {}
 
     img = a.get("img", "")
+    img_style = f' style="object-position: {e(h["img_pos"])};"' if h.get("img_pos") else ''
     link = a.get("link") or (
         f"https://www.agoda.com/ko-kr/partners/partnersearch.aspx"
         f"?cid={SITE_ID}&hid={hid}&currency=KRW" if (hid and SITE_ID) else ""
@@ -170,7 +171,7 @@ def card(h, ag):
 
     return f"""
 <article class="hotel" id="h{hid if hid else ''}" data-w="{w if w is not None else ''}" data-h="{ht if ht is not None else ''}">
-  {f'<img class="photo" src="{e(img)}" alt="{e(h["name"])} 사진" loading="lazy">' if img else '<div class="photo ph"></div>'}
+  {f'<img class="photo" src="{e(img)}" alt="{e(h["name"])} 사진" loading="lazy"{img_style}>' if img else '<div class="photo ph"></div>'}
   <div class="body">
     <div class="verdict"></div>
     <h2>{e(h.get("name"))}</h2>
