@@ -289,6 +289,20 @@
       "source_url": "https://www.sonohotelsresorts.com/calm_gj/pet",
       "img_pos": "center 60%",
       "checked_on": "2026-09-05"
+    },
+    {
+      "name": "선셋호텔",
+      "region": "부산",
+      "city": "해운대",
+      "agoda_hid": 178277,
+      "max_weight_kg": 10,
+      "max_pets": 1,
+      "extra_fee_krw": 30000,
+      "fee_unit": "1마리당 1박",
+      "vaccine_proof": true,
+      "note": "디럭스 패밀리 · 패밀리 퀸트윈 · 슈페리어 스위트룸에서만 동반 가능 · 사전 문의 필수 · 광견병 접종 기록 필요 · 객실에 반려동물만 두고 외출 금지 · 매너벨트 착용",
+      "source_url": "http://sunsethotel.co.kr/bbs/board.php?bo_table=tl_faq",
+      "checked_on": "2026-09-05"
     }
   ]
 }
