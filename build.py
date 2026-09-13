@@ -111,7 +111,7 @@ def card(h, ag):
     hid = h.get("agoda_hid")
     a = ag.get(hid, {}) if hid else {}
 
-    img = a.get("img", "")
+    img = a.get("img") or h.get("photo_url") or ""
     img_style = f' style="object-position: {e(h["img_pos"])};"' if h.get("img_pos") else ''
     link = a.get("link") or (
         f"https://www.agoda.com/ko-kr/partners/partnersearch.aspx"
