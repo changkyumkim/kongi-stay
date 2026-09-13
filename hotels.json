@@ -317,6 +317,30 @@
       "source_url": "http://sunsethotel.co.kr/bbs/board.php?bo_table=tl_faq",
       "checked_on": "2026-09-10",
       "photo_url": "https://pix8.agoda.net/hotelImages/178277/0/40f8ca88d6bda8ba4d5b35248274fb4a.jpg?ce=2&s=800x600"
+    },
+    {
+      "name": "래디언트 남포",
+      "region": "부산",
+      "city": "중구",
+      "agoda_hid": 47191498,
+      "agoda_name": "래디언트 남포",
+      "max_weight_kg": 8,
+      "max_height_cm": null,
+      "max_pets": null,
+      "extra_fee_krw": 30000,
+      "fee_unit": "1박당",
+      "deposit_krw": null,
+      "vaccine_proof": null,
+      "common_area_ok": null,
+      "advance_days": null,
+      "breed_blocked": null,
+      "amenity": null,
+      "facility": null,
+      "tip": "반려견 추가요금은 사전 예약이 필수입니다.",
+      "note": "추가요금이 몸무게에 따라 다릅니다. 5kg 미만은 1박당 30,000원, 8kg 미만은 50,000원입니다.\n요금표가 8kg 미만까지만 있어 그보다 큰 아이는 전화로 확인하셔야 합니다. 8kg 딱 맞는 경우도 「미만」이라 확인이 필요합니다.\n호텔 안내에 반려견 요금만 있고 어느 객실에서 되는지는 적혀 있지 않습니다. 예약 전에 1811-8394로 확인해 보세요.\n전 객실 호텔 내 주차가 안 됩니다. 제휴 주차장(남포주차장)을 유료로 쓰셔야 하고 차종에 따라 11,000~18,000원입니다.\n비대면 체크인이라 예약할 때 연락처가 없으면 객실 비밀번호 문자를 못 받습니다. 그때는 1811-8394로 연락하시면 됩니다.",
+      "source_url": "http://radiantnampo.com/rooms/detail/36049",
+      "checked_on": "2026-09-13",
+      "photo_url": "https://pix8.agoda.net/hotelImages/47191498/0/a6a9b310ef783b96d9e4ee9504eaeac7.jpeg?ce=0&s=800x600"
     }
   ]
 }
