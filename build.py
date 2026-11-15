@@ -2,8 +2,7 @@
 hotels.json 을 읽어서 index.html 을 굽는다.
 
 아고다 API 는 더 이상 부르지 않는다 (2026-11 제휴 종료).
-사진은 hotels.json 의 photo_url, 버튼 링크는 아래 AGODA_CID 로 만든 링크를 쓴다.
-(버튼·링크·사진은 다음 작업에서 바꾼다)
+사진은 hotels.json 의 photo_url, 버튼 링크는 제휴 번호(cid) 없는 아고다 주소(hid 만)를 쓴다.
 
 실행: python build.py   (환경변수·.env 필요 없음)
 """
@@ -26,9 +25,6 @@ KST = timezone(timedelta(hours=9))
 SITE_ID = ""
 API_KEY = ""
 API_URL = ""
-
-# 버튼 링크에 들어가는 아고다 사이트 번호. 배포된 index.html 에 이미 공개돼 있던 값 그대로 (비밀값 아님)
-AGODA_CID = "1938144"
 
 
 # ── 아고다 ────────────────────────────────────────────
@@ -113,7 +109,7 @@ def card(h, ag):
     img_style = f' style="object-position: {e(h["img_pos"])};"' if h.get("img_pos") else ''
     link = a.get("link") or (
         f"https://www.agoda.com/ko-kr/partners/partnersearch.aspx"
-        f"?cid={AGODA_CID}&hid={hid}&currency=KRW" if (hid and AGODA_CID) else ""
+        f"?hid={hid}&currency=KRW" if hid else ""
     )
 
     w = h.get("max_weight_kg")
@@ -191,7 +187,7 @@ def card(h, ag):
     {f'<div class="tip-wrap"><span class="tip">{e(h["tip"])}</span></div>' if h.get("tip") else ""}
     {note_html}
 
-    {f'<a class="cta" href="{e(link)}" target="_blank" rel="nofollow sponsored noopener">아고다에서 방 보기</a>' if link else ""}
+    {f'<a class="cta" href="{e(link)}" target="_blank" rel="nofollow noopener">아고다에서 방 보기</a>' if link else ""}
 
     <p class="src">
       {f'<a href="{e(h["source_url"])}" target="_blank" rel="noopener nofollow">{e(h.get("source_label") or "호텔 공식 규정")}</a>' if h.get("source_url") else "출처 확인 필요"}
@@ -376,7 +372,6 @@ input[type=range]::-moz-range-thumb{{width:20px;height:20px;border-radius:50%;ba
 <p class="foot">
   반려동물 규정은 호텔이 예고 없이 바꿉니다. 예약 전에 호텔에 다시 확인해 주세요.
   각 호텔마다 확인한 날짜와 출처를 함께 적어두었습니다.<span class="gap"></span>
-  이 페이지의 링크로 예약이 이루어지면 운영자가 일정 수수료를 받습니다.
   호텔 사진과 평점은 아고다 제공입니다.<br>
   {stamp} 갱신 · 호텔 {n}곳
 </p>
@@ -495,7 +490,7 @@ def main():
         print("hotels.json 에 호텔이 없습니다.")
         sys.exit(1)
 
-    # 아고다 API 는 부르지 않는다. 사진은 photo_url, 링크는 AGODA_CID 로 만든 링크
+    # 아고다 API 는 부르지 않는다. 사진은 photo_url, 링크는 cid 없는 hid 링크
     ag = {}
 
     stamp = datetime.now(KST).strftime("%Y-%m-%d")
