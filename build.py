@@ -1,11 +1,11 @@
 """
 hotels.json 을 읽어서 index.html 을 굽는다.
 
-아고다 API 로 사진·성급·평점·리뷰수·제휴링크를 받아 붙인다.
-API 가 실패해도 사이트는 만들어진다 (펫 조건만으로).
+아고다 API 는 더 이상 부르지 않는다 (2026-11 제휴 종료).
+사진은 hotels.json 의 photo_url, 버튼 링크는 아래 AGODA_CID 로 만든 링크를 쓴다.
+(버튼·링크·사진은 다음 작업에서 바꾼다)
 
-실행: python build.py
-필요: AGODA_SITE_ID, AGODA_API_KEY, AGODA_API_URL (환경변수 또는 .env)
+실행: python build.py   (환경변수·.env 필요 없음)
 """
 import os
 import json
@@ -19,18 +19,16 @@ except ImportError:
     print("requests 가 없습니다: pip install requests")
     sys.exit(1)
 
-try:
-    from dotenv import load_dotenv
-    load_dotenv()
-except ImportError:
-    pass
-
 HERE = os.path.dirname(os.path.abspath(__file__))
 KST = timezone(timedelta(hours=9))
 
-SITE_ID = os.getenv("AGODA_SITE_ID", "").strip()
-API_KEY = os.getenv("AGODA_API_KEY", "").strip()
-API_URL = os.getenv("AGODA_API_URL", "").strip()
+# 아고다 API 를 부르지 않으므로 환경변수·.env 를 읽지 않는다 (fetch_agoda 는 남아 있지만 호출하지 않음)
+SITE_ID = ""
+API_KEY = ""
+API_URL = ""
+
+# 버튼 링크에 들어가는 아고다 사이트 번호. 배포된 index.html 에 이미 공개돼 있던 값 그대로 (비밀값 아님)
+AGODA_CID = "1938144"
 
 
 # ── 아고다 ────────────────────────────────────────────
@@ -115,7 +113,7 @@ def card(h, ag):
     img_style = f' style="object-position: {e(h["img_pos"])};"' if h.get("img_pos") else ''
     link = a.get("link") or (
         f"https://www.agoda.com/ko-kr/partners/partnersearch.aspx"
-        f"?cid={SITE_ID}&hid={hid}&currency=KRW" if (hid and SITE_ID) else ""
+        f"?cid={AGODA_CID}&hid={hid}&currency=KRW" if (hid and AGODA_CID) else ""
     )
 
     w = h.get("max_weight_kg")
@@ -497,9 +495,8 @@ def main():
         print("hotels.json 에 호텔이 없습니다.")
         sys.exit(1)
 
-    hids = [h["agoda_hid"] for h in hotels
-            if h.get("agoda_hid") not in (None, "")]
-    ag = fetch_agoda(hids)
+    # 아고다 API 는 부르지 않는다. 사진은 photo_url, 링크는 AGODA_CID 로 만든 링크
+    ag = {}
 
     stamp = datetime.now(KST).strftime("%Y-%m-%d")
     page = build_page(hotels, ag, stamp)
